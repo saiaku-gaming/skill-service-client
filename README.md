@@ -1,1 +1,1 @@
-# skill-service-client
+# trait-service-client

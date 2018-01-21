@@ -1,4 +1,4 @@
-package com.valhallagame.skillserviceclient.message;
+package com.valhallagame.traitserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetSkillsParameter {
+public class GetTraitsParameter {
 	@NotNull
 	@CheckLowercase
 	private String username;
