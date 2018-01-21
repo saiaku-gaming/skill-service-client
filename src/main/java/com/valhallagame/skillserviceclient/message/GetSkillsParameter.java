@@ -1,4 +1,4 @@
-package com.valhallagame.wardrobeserviceclient.message;
+package com.valhallagame.skillserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetWardrobeItemsParameter {
+public class GetSkillsParameter {
 	@NotNull
 	@CheckLowercase
 	private String username;

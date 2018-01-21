@@ -1,1 +1,1 @@
-# wardrobe-service-client
+# skill-service-client
