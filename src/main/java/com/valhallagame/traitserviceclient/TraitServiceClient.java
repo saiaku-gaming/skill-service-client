@@ -9,6 +9,7 @@ import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
 import com.valhallagame.traitserviceclient.message.AddTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
+import com.valhallagame.traitserviceclient.message.TraitData;
 import com.valhallagame.traitserviceclient.message.UpdateTraitBarIndexParameter;
 
 public class TraitServiceClient {
@@ -34,9 +35,9 @@ public class TraitServiceClient {
 		return traitServiceClient;
 	}
 
-	public RestResponse<List<String>> getTraits(String username) throws IOException {
+	public RestResponse<List<TraitData>> getTraits(String username) throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/get-traits",
-				new GetTraitsParameter(username), new TypeReference<List<String>>() {});
+				new GetTraitsParameter(username), new TypeReference<List<TraitData>>() {});
 	}
 
 	public RestResponse<String> addTrait(AddTraitParameter input) throws IOException {
