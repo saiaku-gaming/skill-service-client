@@ -10,7 +10,7 @@ import com.valhallagame.common.RestResponse;
 import com.valhallagame.traitserviceclient.message.AddTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
 import com.valhallagame.traitserviceclient.message.TraitData;
-import com.valhallagame.traitserviceclient.message.UpdateTraitBarIndexParameter;
+import com.valhallagame.traitserviceclient.message.SaveTraitBarIndexParameter;
 
 public class TraitServiceClient {
 	private static TraitServiceClient traitServiceClient;
@@ -45,8 +45,8 @@ public class TraitServiceClient {
 				input, String.class);
 	}
 	
-	public RestResponse<String> updateTraitBarIndex(UpdateTraitBarIndexParameter input) throws IOException {
-		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/update-trait-bar-index",
+	public RestResponse<String> saveTraitBarIndex(SaveTraitBarIndexParameter input) throws IOException {
+		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/save-trait-bar-index",
 				input, String.class);
 	}
 }
