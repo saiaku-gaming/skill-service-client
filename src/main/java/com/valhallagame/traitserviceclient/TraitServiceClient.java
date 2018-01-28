@@ -1,7 +1,6 @@
 package com.valhallagame.traitserviceclient;
 
 import java.io.IOException;
-import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.valhallagame.common.DefaultServicePortMappings;
@@ -9,8 +8,8 @@ import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
 import com.valhallagame.traitserviceclient.message.AddTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
-import com.valhallagame.traitserviceclient.message.TraitData;
 import com.valhallagame.traitserviceclient.message.SaveTraitBarIndexParameter;
+import com.valhallagame.traitserviceclient.message.TraitData;
 
 public class TraitServiceClient {
 	private static TraitServiceClient traitServiceClient;
@@ -35,9 +34,9 @@ public class TraitServiceClient {
 		return traitServiceClient;
 	}
 
-	public RestResponse<List<TraitData>> getTraits(String username) throws IOException {
+	public RestResponse<TraitData> getTraits(String username) throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/get-traits",
-				new GetTraitsParameter(username), new TypeReference<List<TraitData>>() {});
+				new GetTraitsParameter(username), new TypeReference<TraitData>() {});
 	}
 
 	public RestResponse<String> addTrait(AddTraitParameter input) throws IOException {
