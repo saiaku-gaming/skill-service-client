@@ -1,7 +1,5 @@
 package com.valhallagame.traitserviceclient.message;
 
-import java.util.List;
-
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -11,12 +9,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TraitData {
+public class TraitBarItem {
 	
 	@NotNull
-	List<TraitType> traits;
-	
-	@NotNull
-	List<TraitBarItem> traitBarItems;
+	private TraitType name;
 
+	int barIndex;
+	
 }
