@@ -10,6 +10,7 @@ import com.valhallagame.traitserviceclient.message.AddTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
 import com.valhallagame.traitserviceclient.message.SaveTraitBarIndexParameter;
 import com.valhallagame.traitserviceclient.message.TraitData;
+import com.valhallagame.traitserviceclient.message.TraitType;
 
 public class TraitServiceClient {
 	private static TraitServiceClient traitServiceClient;
@@ -36,16 +37,18 @@ public class TraitServiceClient {
 
 	public RestResponse<TraitData> getTraits(String username) throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/get-traits",
-				new GetTraitsParameter(username), new TypeReference<TraitData>() {});
+				new GetTraitsParameter(username), new TypeReference<TraitData>() {
+				});
 	}
 
 	public RestResponse<String> addTrait(AddTraitParameter input) throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/add-trait",
 				input, String.class);
 	}
-	
-	public RestResponse<String> saveTraitBarIndex(SaveTraitBarIndexParameter input) throws IOException {
+
+	public RestResponse<String> saveTraitBarIndex(String username, TraitType traitType, int barIndex)
+			throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/save-trait-bar-index",
-				input, String.class);
+				new SaveTraitBarIndexParameter(username, traitType, barIndex), String.class);
 	}
 }

@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TraitData {
-	
+
 	@NotNull
-	List<TraitType> traits;
-	
+	private List<TraitType> traits;
+
 	@NotNull
-	List<TraitBarItem> traitBarItems;
+	private List<TraitBarItem> traitBarItems;
 
 }

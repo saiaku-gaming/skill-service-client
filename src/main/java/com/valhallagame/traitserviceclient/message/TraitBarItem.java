@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TraitBarItem {
-	
+
 	@NotNull
 	private TraitType name;
 
-	int barIndex;
-	
+	private int barIndex;
+
 }
