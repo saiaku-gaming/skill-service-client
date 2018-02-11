@@ -6,8 +6,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.valhallagame.common.DefaultServicePortMappings;
 import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
-import com.valhallagame.traitserviceclient.message.AddTraitParameter;
+import com.valhallagame.traitserviceclient.message.UnlockTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
+import com.valhallagame.traitserviceclient.message.LockTraitParameter;
 import com.valhallagame.traitserviceclient.message.SaveTraitBarIndexParameter;
 import com.valhallagame.traitserviceclient.message.TraitData;
 import com.valhallagame.traitserviceclient.message.TraitType;
@@ -41,8 +42,13 @@ public class TraitServiceClient {
 				});
 	}
 
-	public RestResponse<String> addTrait(AddTraitParameter input) throws IOException {
-		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/add-trait",
+	public RestResponse<String> unlockTrait(UnlockTraitParameter input) throws IOException {
+		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/unlock-trait",
+				input, String.class);
+	}
+	
+	public RestResponse<String> lockTrait(LockTraitParameter input) throws IOException {
+		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/lock-trait",
 				input, String.class);
 	}
 

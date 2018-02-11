@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class TraitData {
 
 	@NotNull
-	private List<TraitType> traits;
+	private List<TraitType> unlockedTraits;
 
 	@NotNull
 	private List<TraitBarItem> traitBarItems;
