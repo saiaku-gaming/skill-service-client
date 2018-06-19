@@ -17,6 +17,5 @@ public class TraitData {
 	private List<TraitType> unlockedTraits;
 
 	@NotNull
-	private List<TraitBarItem> traitBarItems;
-
+	private List<TraitType> skilledTraits;
 }

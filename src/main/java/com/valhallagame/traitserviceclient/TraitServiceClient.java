@@ -6,12 +6,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.valhallagame.common.DefaultServicePortMappings;
 import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
-import com.valhallagame.traitserviceclient.message.UnlockTraitParameter;
 import com.valhallagame.traitserviceclient.message.GetTraitsParameter;
 import com.valhallagame.traitserviceclient.message.LockTraitParameter;
-import com.valhallagame.traitserviceclient.message.SaveTraitBarIndexParameter;
+import com.valhallagame.traitserviceclient.message.SkillTraitParameter;
 import com.valhallagame.traitserviceclient.message.TraitData;
-import com.valhallagame.traitserviceclient.message.TraitType;
+import com.valhallagame.traitserviceclient.message.UnlockTraitParameter;
+import com.valhallagame.traitserviceclient.message.UnskillTraitParameter;
 
 public class TraitServiceClient {
 	private static TraitServiceClient traitServiceClient;
@@ -46,15 +46,19 @@ public class TraitServiceClient {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/unlock-trait",
 				input, String.class);
 	}
-	
+
 	public RestResponse<String> lockTrait(LockTraitParameter input) throws IOException {
 		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/lock-trait",
 				input, String.class);
 	}
 
-	public RestResponse<String> saveTraitBarIndex(String username, TraitType traitType, int barIndex)
-			throws IOException {
-		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/save-trait-bar-index",
-				new SaveTraitBarIndexParameter(username, traitType, barIndex), String.class);
+	public RestResponse<String> skillTrait(SkillTraitParameter input) throws IOException {
+		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/skill-trait",
+				input, String.class);
+	}
+
+	public RestResponse<String> unskillTrait(UnskillTraitParameter input) throws IOException {
+		return restCaller.postCall(traitServiceServerUrl + "/v1/trait/unskill-trait",
+				input, String.class);
 	}
 }
