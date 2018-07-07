@@ -25,3 +25,6 @@ hs_err_pid*
 .factorypath
 .project
 .settings/
+
+trait-service-client.iml
+.idea/
