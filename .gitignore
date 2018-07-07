@@ -26,5 +26,9 @@ hs_err_pid*
 .project
 .settings/
 
-trait-service-client.iml
-.idea/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
