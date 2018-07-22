@@ -1,14 +1,12 @@
 package com.valhallagame.traitserviceclient.message;
 
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotBlank;
-
 import com.valhallagame.common.validation.CheckLowercase;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +18,7 @@ public class SkillTraitParameter {
 
 	@NotNull
 	private TraitType name;
+
+	@NotNull
+	private AttributeType selectedAttribute;
 }
