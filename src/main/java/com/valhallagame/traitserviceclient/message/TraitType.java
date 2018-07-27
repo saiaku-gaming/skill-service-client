@@ -1,6 +1,7 @@
 package com.valhallagame.traitserviceclient.message;
 
 public enum TraitType {
+	// GIFTS
 	KICK,
 	DODGE,
 	FROST_BLAST,
@@ -17,5 +18,12 @@ public enum TraitType {
 	TAUNT,
 	FREYRS_PURGE,
 	FRIGGS_INTERVENTION,
-	SEIDHRING
+	SEIDHRING,
+
+	// CURSES
+	POOR_COMBAT_AWARENESS,
+	ALZHEIMERS,
+	TOURETTES,
+	POOR_METABOLISM,
+	PARANOIA
 }
