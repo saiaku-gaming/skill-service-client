@@ -10,4 +10,9 @@ import lombok.NoArgsConstructor;
 public class SkilledTraitData {
     private TraitType trait;
     private AttributeType selectedAttribute;
+    private Integer positionX;
+    private Integer positionY;
+    private Integer specialization;
+    private Integer specializationPositionX;
+    private Integer specializationPositionY;
 }
