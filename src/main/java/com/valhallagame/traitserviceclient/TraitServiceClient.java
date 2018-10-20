@@ -53,4 +53,14 @@ public class TraitServiceClient extends AbstractServiceClient {
 		return restCaller.postCall(serviceServerUrl + "/v1/trait/unskill-trait",
 				input, String.class);
 	}
+
+	public RestResponse<String> specializeTrait(SpecializeTraitParameter input) throws IOException {
+		return restCaller.postCall(serviceServerUrl + "/v1/trait/specialize-trait",
+				input, String.class);
+	}
+
+	public RestResponse<String> unspecializeTrait(UnspecializeTraitParameter input) throws IOException {
+		return restCaller.postCall(serviceServerUrl + "/v1/trait/unspecialize-trait",
+				input, String.class);
+	}
 }
