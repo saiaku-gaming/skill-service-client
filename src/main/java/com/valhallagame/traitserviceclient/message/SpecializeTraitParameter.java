@@ -25,8 +25,5 @@ public class SpecializeTraitParameter {
     private Integer specialization;
 
     @NotNull
-    private Integer positionX;
-
-    @NotNull
-    private Integer positionY;
+    private Integer position;
 }

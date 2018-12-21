@@ -22,6 +22,5 @@ public class SkillTraitParameter {
 	@NotNull
 	private AttributeType selectedAttribute;
 
-	private Integer positionX;
-	private Integer positionY;
+	private Integer position;
 }
