@@ -11,6 +11,7 @@ public class SkilledTraitData {
     private TraitType trait;
     private AttributeType selectedAttribute;
     private Integer position;
+    private Boolean purchased;
     private Integer specialization;
     private Integer specializationPosition;
 }
