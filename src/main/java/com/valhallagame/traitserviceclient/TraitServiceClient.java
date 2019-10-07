@@ -44,14 +44,14 @@ public class TraitServiceClient extends AbstractServiceClient {
 				input, String.class);
 	}
 
-	public RestResponse<SkilledTraitData> purchaseTrait(PurchaseTraitParameter input) throws IOException {
+	public RestResponse<String> purchaseTrait(PurchaseTraitParameter input) throws IOException {
 		return restCaller.postCall(serviceServerUrl + "/v1/trait/purchase-trait",
-				input, SkilledTraitData.class);
+				input, String.class);
 	}
 
-	public RestResponse<SkilledTraitData> depurchaseTrait(DepurchaseTraitParameter input) throws IOException {
+	public RestResponse<String> depurchaseTrait(DepurchaseTraitParameter input) throws IOException {
 		return restCaller.postCall(serviceServerUrl + "/v1/trait/depurchase-trait",
-				input, SkilledTraitData.class);
+				input, String.class);
 	}
 
 	public RestResponse<String> skillTrait(SkillTraitParameter input) throws IOException {
