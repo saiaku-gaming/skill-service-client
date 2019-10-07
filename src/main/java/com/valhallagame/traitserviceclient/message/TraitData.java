@@ -16,5 +16,8 @@ public class TraitData {
 	private List<TraitType> unlockedTraits;
 
 	@NotNull
+	private List<TraitType> purchasedTraits;
+
+	@NotNull
 	private List<SkilledTraitData> skilledTraits;
 }
